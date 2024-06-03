@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILE:local}
+    include:
+      - local
+      - property-local
+#--------------
+#
+#
+#
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/announcement
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    hibernate:
+#      ddl-auto: update
+#server:
+#  port: 8081
+
+
+jwt:
+  secret-key: ${SECRET_KEY:ms22DRMLGFJPGJPOGFKPOOGKIPOfddfhgbkivkkjsghkifgvxifgvgfiuFKGFPOKGPO}

@@ -1,0 +1,43 @@
+server:
+  port: 1111
+  forward-headers-strategy: framework
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/announcement
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  data:
+    redis:
+      host: localhost
+      port: 6380
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: info.writtenn@gmail.com
+    password: 'hadp yfwc hydb egtu'
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8010/eureka

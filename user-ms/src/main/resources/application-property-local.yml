@@ -1,0 +1,13 @@
+app:
+  email-confirmation:
+    url: "http://localhost:8080/v1/auth/verify-email?code="
+    redirect-url-after-confirmation: "https://www.google.com"
+
+jwt:
+  accessToken:
+    expiration:
+      time: 15
+  refreshToken:
+    expiration:
+      count: 50
+      time: 21600
